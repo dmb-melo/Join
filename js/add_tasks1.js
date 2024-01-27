@@ -1,4 +1,3 @@
-
 function getCategoryForPriority(priority) {
     switch (priority) {
       case "priorityUrgent":
