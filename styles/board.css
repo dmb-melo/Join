@@ -1,0 +1,1035 @@
+.headlineBoard {
+  height: 73px;
+  width: 176px;
+  display: flex;
+  align-items: center;
+  font-size: 31px;
+  font-family: "inter", sans-serif;
+  color: #000;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.wd100 {
+  width: 100% !important;
+}
+
+.d-None {
+  display: none;
+}
+
+#tasks {
+  overflow-y: scroll !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tasksToDo {
+  width: calc(100% - 232px);
+  height: calc(100vh - 96px);
+  margin-left: 232px;
+}
+
+.tasksCardsDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.searchBar {
+  width: 100%;
+  height: 232px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 88px 1px 0px;
+}
+
+.searchbarIn {
+  display: flex;
+  width: 1215px;
+  height: 73px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 64px;
+  margin-right: 82px;
+  margin-top: 79.5px;
+  margin-bottom: 48px;
+}
+
+.searchBox {
+  display: flex;
+  width: 312px;
+  height: 48px;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--icon, #a8a8a8);
+  background: #fff;
+}
+
+.primaryBoard {
+  transition: all 100ms ease-in-out;
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 10px;
+  background: #2a3647;
+}
+
+.primaryBoard:hover {
+  cursor: pointer;
+  background: #29abe2;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.searchBoxLeft {
+  display: flex;
+  width: 504px;
+  gap: 32px;
+  margin-right: 65px;
+}
+
+.searchinput {
+  cursor: pointer;
+  width: 310px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.searchImg:hover .board-search {
+  display: none;
+}
+
+.board-searchHover {
+  display: none;
+}
+
+.searchImg:hover .board-searchHover {
+  display: block;
+}
+
+.src {
+  cursor: pointer;
+  width: 100px;
+  height: 24px;
+  color: var(--Style, #d1d1d1);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 120%;
+  outline: none;
+  border-style: none;
+}
+
+.searchImg {
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.plusImg,
+.plusImgHover {
+  width: 24px;
+  width: 24px;
+}
+
+.imgPlusTask:hover .plusImgHover {
+  display: block;
+}
+
+.plusImgHover {
+  display: none;
+}
+
+.imgPlusTask:hover .plusImg {
+  display: none;
+}
+
+.plus_add_task_mobile {
+  display: none;
+  cursor: pointer;
+}
+
+.plus_add_task_mobileHover {
+  display: none;
+  cursor: pointer;
+}
+
+/* tasBoard */
+.taskAria {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 64px;
+  max-height: 688px;
+  width: 1208px;
+  align-items: flex-start;
+  gap: 26px;
+  flex-shrink: 0;
+  padding-bottom: 64px;
+}
+
+.taskBoardTtle {
+  width: 252px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.headLineCss {
+  display: flex;
+  max-width: 244px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progressTitles {
+  font-size: 20px;
+  font-family: "inter", sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--menu-color, #42526e);
+}
+
+.headLineCss a {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.noTask {
+  color: var(--icon, #a8a8a8);
+  font-family: "open-sans", sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  display: flex;
+  height: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px dashed var(--icon, #a8a8a8);
+  background: #e7e7e7;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+}
+
+/* Large Card */
+.cardA {
+  display: flex;
+  min-width: 252px;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* border: 2px solid var(--Version-2-main-color, #2a3647); */
+  border-radius: 24px;
+  background: var(--white, #fff);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 24px;
+  background: var(--white, #fff);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+  height: 280px;
+  max-width: 252px;
+}
+
+.cardA:hover {
+  transform: rotate(10deg);
+}
+
+.taskText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  word-break: break-all;
+}
+
+.taskTitle {
+  color: #2a3647;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.taskDescription {
+  color: #a8a8a8;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.smallCardFooter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boardAssigend {
+  display: flex;
+}
+
+.smallCardVersionCircel {
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  color: white;
+  border: solid 1px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -8px;
+}
+
+.lastCircel {
+  color: black !important;
+}
+
+.lastSmallCircel {
+  border: solid 1px black;
+}
+
+.smallPrio {
+  width: 124px;
+  margin-left: -20px;
+}
+
+.smallProgress {
+  color: #000;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+/* progress bar */
+.progress {
+  background: rgb(18 17 17 / 10%);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  /* height: 40px; */
+  width: 77%;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #080808;
+  border-radius: 100px;
+  background: #444444;
+  height: 10px;
+  width: 0;
+}
+
+.popUpWindow {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsla(0, 0%, 50%, 0.561);
+  z-index: 999;
+  transform: translateX(400%);
+  transition: 550ms ease-in-out;
+}
+
+.openAddWindow {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsla(0, 0%, 50%, 0.561);
+  z-index: 999;
+  transform: translateX(0px);
+  transition: 550ms ease-in-out;
+}
+
+.closeAddBoard {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  border: 0;
+  background: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.largeCardA {
+  max-height: 86%;
+  border: solid;
+  display: flex;
+  padding: 48px 40px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  width: 525px;
+}
+
+.largesCard {
+  width: 100%;
+  overflow: scroll;
+}
+
+.editBoard {
+  height: 80%;
+  width: 400px;
+  border: solid;
+  display: flex;
+  width: 525px;
+  padding: 48px 40px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  justify-content: space-between;
+}
+
+.largeCardInside {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.largCardHeader {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.largCardHeader button {
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.largCardText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.largCardTextArea {
+  color: black;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.largCardTitle {
+  color: var(--black, #000);
+  /* font-family: Inter; */
+  /* font-size: 61px; */
+  /* font-style: normal; */
+  /* font-weight: 700; */
+  /* line-height: 120%; */
+  font-size: 1.8125rem;
+}
+
+.largTaskDueDat {
+  color: black;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.largeTaskDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.largPrioDetail {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+#boardAssigendLargCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.largCardContactContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.largeCardVersionCircel {
+  border-radius: 100px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  color: white;
+  border: solid 1px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boardLargContactsAvatar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.largCartSubtasks {
+  color: var(--Version-2-main-color, #2a3647);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-top: 24px;
+}
+
+.assigendLarge {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--Version-2-main-color, #2a3647);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.largCardFooter {
+  height: 98px;
+  display: flex;
+  align-items: end;
+}
+
+.delete_task {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.delete_task:hover .delete-task-title {
+  color: #29abe2;
+  cursor: pointer;
+}
+
+.delete-task-bt {
+  background-color: white;
+  border: none;
+  outline: none;
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Cmask id='mask0_71348_10269' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='24'%3E%3Crect x='0.5' width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_71348_10269)'%3E%3Cpath d='M7.5 21C6.95 21 6.47917 20.8042 6.0875 20.4125C5.69583 20.0208 5.5 19.55 5.5 19V6C5.21667 6 4.97917 5.90417 4.7875 5.7125C4.59583 5.52083 4.5 5.28333 4.5 5C4.5 4.71667 4.59583 4.47917 4.7875 4.2875C4.97917 4.09583 5.21667 4 5.5 4H9.5C9.5 3.71667 9.59583 3.47917 9.7875 3.2875C9.97917 3.09583 10.2167 3 10.5 3H14.5C14.7833 3 15.0208 3.09583 15.2125 3.2875C15.4042 3.47917 15.5 3.71667 15.5 4H19.5C19.7833 4 20.0208 4.09583 20.2125 4.2875C20.4042 4.47917 20.5 4.71667 20.5 5C20.5 5.28333 20.4042 5.52083 20.2125 5.7125C20.0208 5.90417 19.7833 6 19.5 6V19C19.5 19.55 19.3042 20.0208 18.9125 20.4125C18.5208 20.8042 18.05 21 17.5 21H7.5ZM7.5 6V19H17.5V6H7.5ZM9.5 16C9.5 16.2833 9.59583 16.5208 9.7875 16.7125C9.97917 16.9042 10.2167 17 10.5 17C10.7833 17 11.0208 16.9042 11.2125 16.7125C11.4042 16.5208 11.5 16.2833 11.5 16V9C11.5 8.71667 11.4042 8.47917 11.2125 8.2875C11.0208 8.09583 10.7833 8 10.5 8C10.2167 8 9.97917 8.09583 9.7875 8.2875C9.59583 8.47917 9.5 8.71667 9.5 9V16ZM13.5 16C13.5 16.2833 13.5958 16.5208 13.7875 16.7125C13.9792 16.9042 14.2167 17 14.5 17C14.7833 17 15.0208 16.9042 15.2125 16.7125C15.4042 16.5208 15.5 16.2833 15.5 16V9C15.5 8.71667 15.4042 8.47917 15.2125 8.2875C15.0208 8.09583 14.7833 8 14.5 8C14.2167 8 13.9792 8.09583 13.7875 8.2875C13.5958 8.47917 13.5 8.71667 13.5 9V16Z' fill='%232A3647'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.boardText p {
+  color: black;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.boardText {
+  color: black;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.progressContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 20px;
+}
+
+/* editAddBoard */
+.boardUnserList {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  padding-inline-start: 0px;
+  height: 10px;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--white, #fff);
+  z-index: 1;
+}
+
+.desingLagrCardEdit {
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.closeLargeEditCardButton {
+  width: 85%;
+  display: flex;
+  justify-content: end;
+}
+
+.close-button-edite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+}
+
+.close-button-edite:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* addTaskEdit */
+.frame17Borad {
+  position: relative;
+  height: 120px;
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  width: 440px;
+  border-radius: 10px;
+}
+
+.categoryFrame74Board {
+  z-index: 6;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid var(--Style, #d1d1d1);
+  background: var(--white, #fff);
+  color: var(--black, #000);
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+  width: 410px;
+  margin-top: 8px;
+}
+
+.frame203Board {
+  display: flex;
+  flex-direction: column;
+  height: 64px;
+  border: 1px;
+  gap: 4px;
+  width: 440px;
+}
+
+.title_frame14Board {
+  cursor: pointer;
+  display: flex;
+  padding: 12px 21px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--Style, #d1d1d1);
+  background: #fff;
+  margin-top: 8px;
+}
+
+.subtasksFrame14Board {
+  cursor: pointer;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--Style, #d1d1d1);
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  padding: 12px 16px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--Style, #d1d1d1);
+  background: #fff;
+}
+
+.largDueDate {
+  display: flex;
+  gap: 13px;
+}
+.addBoard {
+  width: 92%;
+}
+
+.subtaskItemBoard {
+  cursor: pointer;
+  display: flex;
+  width: 410px;
+  height: 32px;
+  padding: 4px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+.desingLagrCard {
+  height: 90%;
+  position: fixed;
+  bottom: 114px;
+  top: 4px;
+}
+.listBoard {
+  display: flex;
+  justify-content: end;
+}
+
+.underListContactBoard {
+  cursor: pointer;
+  position: absolute;
+  top: 55px;
+  padding-inline-start: 0px;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--white, #fff);
+  z-index: 1;
+  max-height: 340px;
+  width: 425px;
+  overflow: auto;
+}
+
+.inputRight_addTaskEdit {
+  display: flex;
+  width: 440px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 80px;
+}
+
+.inputRight_addTaskEditOpen {
+  margin-top: 360px !important;
+}
+
+.contactAvatarEdit {
+  display: flex;
+}
+
+.contactAvatarBoard{
+  margin-top: 4px;
+  display: flex;
+  height: 100px;
+  width:440px;
+}
+
+.allSubtasksBoard{
+  display: flex;
+  flex-direction: column; 
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.dueDate_frame14Board{
+  cursor: pointer; 
+  display: flex;
+  padding: 12px 21px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--Style, #D1D1D1);
+  background: #FFF; 
+  margin-top: 8px;
+}
+
+.circleAvatarBoard{
+  border-radius: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: white;
+  font-size: 24px;
+  border: solid;  
+  font-family: "Inter", sans-serif; 
+}
+.custom-checkbox-board{
+  margin-left: 3px;
+}
+
+.custom-checkbox-board-label{
+
+  position: absolute;
+}
+
+.custom-checkbox-board label:before {
+  left: 130px;
+}
+
+.custom-checkbox-board input[type="checkbox"]:checked + label:before {
+  left: 130px;
+}
+
+.contactList:hover .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+  left: 130px;
+}
+.subtasksEdit {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.boardpriority {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.textUrgent {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.textMedium {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.textLow {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.custom-checkbox-board {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.custom-checkbox-board input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox-board label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox-board label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 25" fill="none"%3E%3Crect x="4.68213" y="4.39673" width="16" height="16" rx="3" stroke="%232A3647" stroke-width="2"%3E%3C/rect%3E%3C/svg%3E');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 300px;
+}
+
+.contactList:hover .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M17 8.96582V14.9658C17 16.6227 15.6569 17.9658 14 17.9658H4C2.34315 17.9658 1 16.6227 1 14.9658V4.96582C1 3.30897 2.34315 1.96582 4 1.96582H12' stroke='%232A3647' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M5 9.96582L9 13.9658L17 2.46582' stroke='%232A3647' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 300px;
+}
+
+.custom-checkbox-board input[type="checkbox"]:checked + label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M17 8V14C17 15.6569 15.6569 17 14 17H4C2.34315 17 1 15.6569 1 14V4C1 2.34315 2.34315 1 4 1H12' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M5 9L9 13L17 1.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 300px;
+  /* Adjust this as needed */
+}
+
+.save-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+.edit_task:hover .edit-task-title {
+  color: #2aaae2;
+}
+
+.subtasksContents {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 92%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.subtasksContents:hover {
+  background: #eeee;
+}
+.subtasksContents input[type="checkbox"] {
+  display: none;
+}
+
+.subtasksContents label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+  gap: 20px;
+}
+
+.subtasksContents label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 25" fill="none"%3E%3Crect x="4.68213" y="4.39673" width="16" height="16" rx="3" stroke="%232A3647" stroke-width="2"%3E%3C/rect%3E%3C/svg%3E');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.subtasksContents input[type="checkbox"]:checked + label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M17 8.96582V14.9658C17 16.6227 15.6569 17.9658 14 17.9658H4C2.34315 17.9658 1 16.6227 1 14.9658V4.96582C1 3.30897 2.34315 1.96582 4 1.96582H12' stroke='%232A3647' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M5 9.96582L9 13.9658L17 2.46582' stroke='%232A3647' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.subtaskButtons {
+  display: none;
+}
+.subtaskButtons button {
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.subtaskItem:hover .subtaskButtons {
+  display: inline-block;
+}
+.inputLeft_addTaskEdit {
+  display: flex;
+  width: 440px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+.allSubtasksBoard {
+  width: 100%;
+}
+
+.subtaskItemBoard {
+  cursor: pointer;
+  display: flex;
+  width: 410px;
+  height: 32px;
+  padding: 4px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  width: 100% !important;
+}
+
+.iconsContainerBoard {  
+  display: none;     
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.iconsContainerBoard{  
+  display: none;     
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.deleteBoard{
+  width: 24px;
+  height: 24px;    
+}
+
+.subtaskCheckBoard:hover{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='24' viewBox='0 0 25 24' fill='none'%3E%3Crect x='0.144531' width='24' height='24' rx='12' fill='%23EEEEEE'/%3E%3Cmask id='mask0_75592_9966' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='24'%3E%3Crect x='0.144531' width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_75592_9966)'%3E%3Cpath d='M9.69474 15.15L18.1697 6.675C18.3697 6.475 18.6072 6.375 18.8822 6.375C19.1572 6.375 19.3947 6.475 19.5947 6.675C19.7947 6.875 19.8947 7.1125 19.8947 7.3875C19.8947 7.6625 19.7947 7.9 19.5947 8.1L10.3947 17.3C10.1947 17.5 9.96141 17.6 9.69474 17.6C9.42807 17.6 9.19474 17.5 8.99474 17.3L4.69474 13C4.49474 12.8 4.3989 12.5625 4.40724 12.2875C4.41557 12.0125 4.51974 11.775 4.71974 11.575C4.91974 11.375 5.15724 11.275 5.43224 11.275C5.70724 11.275 5.94474 11.375 6.14474 11.575L9.69474 15.15Z' fill='%232A3647'/%3E%3C/g%3E%3C/svg%3E");
+}
+
