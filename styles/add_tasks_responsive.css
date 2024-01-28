@@ -549,19 +549,6 @@
     width: 512px;
   }
 
-  @media (min-height: 1100px) {
-    .textContainer_addTask {
-      font-size: 47px;
-      margin-top: -300px;  
-    
-    
-    }
-
-    .inputLeft_addTask {
-      margin-top: -200px;
-    }
-  }
-
   .contentTask {
     display: flex;
     justify-content: center;
@@ -680,7 +667,6 @@
   .frame28 {
     display: flex;
     width: 506px;
-
     justify-content: space-evenly;
     flex-direction: column;
   }
@@ -777,18 +763,6 @@
 }
 
 @media (min-width: 600px) and (max-width: 799px) {
-  @media (min-height: 1100px) {
-    .textContainer_addTask {
-      font-size: 47px;
-      margin-top: -200px !important;
-    }
-
-    .inputLeft_addTask {
-      margin-top: -100px;
-     
-    }
-  }
-
   .box-sizing {
     display: none;
   }
@@ -857,10 +831,6 @@
   .inputRight_addTask {
     margin-top: 44px;
     width: 518px;
-  }
-
-  .content_addTask {
-    margin-top: 356px;
   }
 
   .title {

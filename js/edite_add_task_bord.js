@@ -11,21 +11,18 @@ function editLargCard(taskId) {
   let editCard = document.getElementById("desingLagrCard");
   editCard.style.display = "flex";
   editCard.style.alignItems = "center";
-  editCard.style.height = "80%";
-  editLargCardStyle(taskId);
+  editCard.style.height = "100%";
+  document.getElementById("largesCard").classList.add("d-None");
+  document.getElementById("addTaskLargeCard").innerHTML = "";
+  document.getElementById("addTaskLargeCard").innerHTML = generateAddEditeTask(taskId);
+  document.getElementById("addTaskLargeCard").style.display = "flex";
+  document.getElementById("addTaskLargeCard").style.width = "100%";
+  document.getElementById("addTaskLargeCard").style.overflow = "scroll";
+  document.getElementById("addTaskLargeCard").style.justifyContent = "center";
   edittaskArea(taskId);
   renderEditTask();
   saveUneditedAssigned(taskId);
   loadEdit();
-}
-
-function editLargCardStyle(taskId) {
-  document.getElementById("largesCard").classList.add("d-None");
-  document.getElementById("addTaskLargeCard").innerHTML = "";
-  document.getElementById("addTaskLargeCard").innerHTML = generateAddEditeTask(taskId);
-  document.getElementById("addTaskLargeCard").style.display = "block";
-  document.getElementById("addTaskLargeCard").style.width = "525px";
-  document.getElementById("addTaskLargeCard").style.overflow = "scroll";
 }
 
 function loadEdit() {
@@ -86,10 +83,6 @@ function saveEditTaskBoard(taskId) {
   let priorityContentBoard = selectedPriorityBoard ? selectedPriorityBoard.innerHTML : "";
   let selectedPriorityIDBoard = "";
   let category = defineCategory(taskId);
-  validateEditeTaskBoard(status, selectedPriorityBoard, priorityContentBoard, selectedPriorityIDBoard, category);
-}
-
-function validateEditeTaskBoard(status, selectedPriorityBoard, priorityContentBoard, selectedPriorityIDBoard, category) {
   if (selectedPriorityBoard) {
     selectedPriorityIDBoard = selectedPriorityBoard.id;
   }
@@ -156,7 +149,9 @@ function deleteSubs(index) {
 }
 
 function deleteSubTaskById(id) {
+  console.log("stateOfTask:", stateOfTask);
   const index = stateOfTask.findIndex((item) => item === id);
+  console.log("Gefundener Index:", index);
   if (index !== 0) {
     stateOfTask.splice(index, 1);
     let idAtText = JSON.stringify(stateOfTask);
@@ -185,7 +180,14 @@ function displaySubtasks() {
   subtasksElement.innerHTML = "";
   for (let i = 0; i < oldSubs.length; i++) {
     const subtask = oldSubs[i];
-    subtasksElement.innerHTML += generateDisplaySubtasksHTML(i, subtask);
+    subtasksElement.innerHTML += /*html*/ `
+      <div class="subtaskItem" id="subsTaskEdit${i}">
+        <span><li>${subtask}</li></span>
+        <div class="subtaskButtons">
+          <button id="editButton_${i}" onclick="editSub('${i}')"><img src="../assets/img/edit_task.png"></button>
+          <button id="deleteButton_${i}" onclick="deleteSubs('${i}')"><img src="./assets/img/delete_contacts.png"></button>
+        </div>
+      </div>`;
   }
 }
 
@@ -204,6 +206,16 @@ function saveEditetSubTask(index) {
   let newSubtask = document.getElementById(`subtaskEditeBoard${index}`).value;
   oldSubs[index] = newSubtask;
   displaySubtasks();
+}
+
+function generateInputEditSubtask(index) {
+  return /*html*/ `
+     <div class="subtaskItem" style="background-color: white;">
+      <input type="text" id="subtaskEditeBoard${index}" style="outline: none; border: none;" >
+        <div class="iconsContainer"><img onclick="deleteSubTaskEdite(${index})" class="delete" src="./assets/img/delete_contacts.png">
+          <img class="vector" src="./assets/img/vector.png"><img class="subtaskCheck subtasksCheck" onclick="saveEditetSubTask(${index})"  src="./assets/img/done.png">
+        </div>
+     </div>`;
 }
 
 function createIconsContainer(subtaskItemDiv, subtaskText, index) {
@@ -258,6 +270,7 @@ function checkboxAddTaskEdit() {
       assigned.push(label.textContent);
     }
   });
+  console.log("Assigned Contacts:", assigned);
 }
 
 function getStatusTaskId(taskId) {

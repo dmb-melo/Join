@@ -12,24 +12,24 @@ function generateAddEditeTask(taskId) {
                     </div>
                 </div>
                 <div class ="inputLeft_addTaskBoard">
-                    <div class="title_v1 wd100">               
-                        <div class="title">Title<span class="spanClass">*</span>
+                    <div class="title_v1Edit">               
+                        <div class="title">Title
                             <div class="frame203Board edittitle" onclick="required(this)">
                                 <div class="title_frame14Board">
                                     <input  type="text"  class="text_enterTitle" placeholder="Enter a Title" id="editTitle" required oninput="handleInput(this)">
                                 </div> 
-                                <div class="titleFieldRequired" id="titleFieldRequired" onclick="required(this)">This field is required</div> 
+                                <div class="titleFieldRequired" id="titleFieldRequired"></div> 
                             </div>                  
                         </div>                         
                     </div>
                     <div class="description_v1 wd100">
-                        <div class="description">Description<span class="spanClass">*</span></div>             
+                        <div class="description">Description</div>             
                         <div class="frame207 wd100" onclick="required(this)">
                         <div class="frame17Borad titleEditCard">
                             <textarea  class="text_enterDescription" type="text"  id="editDescription" placeholder="Enter a Description" required oninput="handleInput(this)"></textarea>
                             <img class ="recursor" src="./assets/img/Recurso 1 1.png">
                         </div>                       
-                        <div class="descriptionFieldRequired" id="descriptionFieldRequired" onclick="required(this)">This field is required</div> 
+                        <div class="descriptionFieldRequired" id="descriptionFieldRequired"></div> 
                         </div>
                     </div>
                     <div class="asignedTo_v1 wd100">
@@ -55,12 +55,12 @@ function generateAddEditeTask(taskId) {
                 </div>
                 <div class="inputRight_addTaskEdit" id="dateAddTaskEdit">
                     <div class="dueDateBoard wd100">
-                        <div class="text_DueDate">Due date<span class="spanClass">*</span></div>
-                        <div class="frame211 wd100" onclick="required(this)">                    
+                        <div class="text_DueDate">Due date</div>
+                        <div class="frame211 wd100">                    
                                 <div class="dueDate_frame14">
                                     <input class="inputDate"  type="date" name="date" max="2030-12-31" placeholder="dd/mm/yyyy" id="editDueDate" required oninput="handleInput(this)" >   
                                 </div>
-                                <div class="dueDateFieldRequired" id="dueDateFieldRequired"   onclick="required(this)">This field is required</div> 
+                                <div class="dueDateFieldRequired" id="dueDateFieldRequired"></div> 
                         </div>
                     </div>
                     <div class="frame28 wd100">
@@ -118,18 +118,146 @@ function generateAddEditeTask(taskId) {
                         </div>                    
                     </div>
                 </div>
-                <div class="">
+                <div class="saveContainer">
                 <div class="save-button">
                     <a class="leadsToBoard" href="#" id="leadsToBoard" onclick="saveEditTaskBoard(${taskId})">
                         <div class="primary">
-                            <div class="textCreateTask">Save</div>
-                            <img class="imgCheckBlack" src="./assets/img/check.png" alt="">              
+                            <div class="textCreateTask">Ok <img src="./assets/img/check.png" alt=""></div>            
                         </div>
                     </a>
                 </div>
             </div>
         </div>        
     </div>
+    `;
+}
+
+function generateContactsAddTaskBoard(name, firstname, surname, i) {
+  return /*html*/ `
+    <div class="circleAvatarBoard" id="circle-${i}" style="background-color: ${colors[i]}">
+      <p class="nameIdList" id="name-id">${firstname}${surname}</p>
+    </div>                
+    <div class="custom-checkbox-board">            
+      <input class="inputCheckBox" type="checkbox" id="myCheckbox_Edit${i}">                    
+      <label class="nameContact ResVersion" for="myCheckbox_Edit${i}">${name}</label>                              
+    </div>`;
+}
+
+function generateAvatarAddTaskBoard(selectedIndex, contact, firstname, surname) {
+  return /*html*/ `
+        <div>
+            <div class="circleAvatarBoard" id="circle-${selectedIndex}" style="background-color: ${colors[selectedIndex]}">
+                <p class="nameIdList" id="name-id">${firstname}${surname}</p>
+            </div>
+        </div>
+    `;
+}
+
+
+function generateContactsAddTask(name, firstname, surname, i) {
+  return /*html*/ `
+    <div class="circleAvatar" id="circle-${i}" style="background-color: ${colors[i]}">
+      <p class="nameIdList" id="name-id">${firstname}${surname}</p>
+    </div>                
+    <div class="custom-checkbox-board">            
+      <input class="inputCheckBox" type="checkbox" id="myCheckbox_${i}">                    
+      <label class="nameContact" for="myCheckbox_${i}">${name}</label>                              
+    </div>`;
+}
+
+function generateAvatarAddTask(selectedIndex, contact, firstname, surname) {
+  return /*html*/ `
+        <div>
+            <div class="circleAvatarBoard" id="circle-${selectedIndex}" style="background-color: ${colors[selectedIndex]}">
+                <p class="nameIdList" id="name-id">${firstname}${surname}</p>
+            </div>
+        </div>
+    `;
+}
+
+function generateSmallCardHTML(task, className, clonedContentDiv, smallProgressDiv, i, taskID) {
+  return /*html*/ `
+      <div class="smallCard cardA" id="smallCardId-${taskID}" draggable="true" ondragstart="startDragged(${taskID})" onclick="openCard(${taskID})"> 
+        <div class="smallCardcategory"><p id="category" class="${className}">${task.category[0]}</p></div>
+        <div class="taskText">
+          <div class="taskTitle">${task.title}</div>
+          <div class="taskDescription">${task.description}</div>
+        </div>
+        ${smallProgressDiv}
+        <div class="smallCardFooter">
+          <div id="boardAssigend-${taskID}" class="boardAssigend"></div>
+          <div class="smallPrio" id="smallCardPrio">${clonedContentDiv.innerHTML}</div>
+        </div>  
+      </div>
+    `;
+}
+
+function generateLargeCardHTML(task, className, clonedContentDiv, subsHtml) {
+  // Convert due date to a Date object
+  var dueDate = new Date(task.dueDate);
+
+  // Format due date as Day/Month/Year
+  var formattedDueDate = `${dueDate.getDate()}/${dueDate.getMonth() + 1}/${dueDate.getFullYear()}`;
+  return /*html*/ `
+      <div class="desingLagrCard" id="desingLagrCard">
+        <div class="largeCardA" id="largeCardA">
+          <div id="addTaskLargeCard" class="d-None"></div>
+    
+          <div class="largesCard" id="largesCard">
+            <div class="largeCardInside">
+              <div class="largCardHeader">
+                <!-- Category and close button -->
+                <div class="lardCardCategory">
+                  <p id="largeCategory" class="${className}">${task.category[0]}</p>
+                </div>
+                <div class="closeLargeCardButton">
+                  <button onclick="closeCard()" class="close-button-edite"><img class="close-img" src="./assets/img/cancel.png"></button>
+                </div>
+              </div>
+              <div class="largCardText">
+                <!-- Title and description -->
+                <div class="largCardTitle">
+                  <h1>${task.title}</h1>
+                </div>
+                <div class="largCardTextArea">
+                  <p>${task.description}</p>
+                </div>
+              </div>
+              <div class="largeTaskDetails">
+                <!-- Due date, priority, assigned person, and subtasks -->
+                <div class="largTaskDueDat">
+                  <div class="largDueDate"><span>Due Date:</span><span>${formattedDueDate}</span></div>
+                </div>
+                <div class="largPrioDetail">
+                  <p  class="boardText">Priority:</p><p class="blackImport">${clonedContentDiv.innerHTML}</p>
+                </div>
+                <div class="assigendLarge">
+                  <p  class="boardText">Assigned To:</p>
+                  <div  id="boardAssigendLargCard"></div>
+                </div>
+                <div class="subtasks wd100">
+                  <p>Subtasks</p>
+                  <p>${subsHtml}</p>
+                </div>
+                <div class="largCardFooter">
+                  <div class="largCardButton">
+                  <div class="delete_task" onmouseover="changeImage(true)" onmouseout="changeImage(false)" onclick="deleteTask(event)">
+                    <img id="delete-task-image" class="delete-task-bt" src="../assets/img/delete_contacts.png">
+                         <p class="delete-task-title" id="delete-task-title">Delete</p>
+                    </div>
+                    <img class="largCardButton_vector" src="./assets/img/vector.png" alt="">
+                    <div class="edit_task" onmouseover="changeEditImage(true)" onmouseout="changeEditImage(false)" onclick="editLargCard(${task.id})" style="display: flex; align-items: center; gap: 4px; cursor:pointer;">
+             <img id="edit-task-image" class="imgEdit_task" src="./assets/img/edit_task.png" alt="">
+             <p class="edit-task-title">Edit</p>
+                </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
 }
 
@@ -146,8 +274,10 @@ function generateSubtasksHTML(task) {
 function generateEditContacts(assignedItem, color) {
   let name = assignedItem;
   let firstname = name[0].toUpperCase();
+
   let names = assignedItem.split(" ");
   let surname = names[1].toUpperCase().charAt(0);
+
   return /*html*/ `
       <div class="boardLargContactsAvatar">
         <div class="editVersionCircel" style="background-color: ${color}">
@@ -210,11 +340,12 @@ function generateProgressBar(taskId, taskSubtasksLength) {
         `;
 }
 
-function generate_addTask(statusFromUser) {
-  return /*html*/ `   <div class = "contentTask">  
+function generate_addTask(statusFromUser){
+    return /*html*/`   <div class = "contentTask">  
     <div class="content_addTask">
             <div class = "textContainer_addTask">
                 <div class ="text_addTask">Add Task</div>
+           
             </div>
         </div>   
         <div class ="group66_addTask" >
@@ -414,4 +545,4 @@ function generate_addTask(statusFromUser) {
     </div>        
 </div>
 </div>`;
-}
+} 
