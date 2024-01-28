@@ -152,7 +152,7 @@ function handleContactSearch() {
   }
 }
 
-function displayAvatar(selectedContacts, contacts, colors) {
+function displayAvatar(selectedContacts, contacts) {
   let contactAvatar = document.getElementById("contactAvatar");
   contactAvatar.innerHTML = "";
   for (let i = 0; i < selectedContacts.length; i++) {
@@ -185,7 +185,6 @@ function clearAllSelections() {
   });
 }
 
-
 function addTask(statusFromUser) {
   switchColorpriorityContent();
   const titleValue = getValueAndClearInput("title");
@@ -203,7 +202,6 @@ function addTask(statusFromUser) {
   updateArrays(newTask);
   clearUIElements();
   saveRenderAndReset();
- 
 }
 
 function getValueAndClearInput(inputId) {
@@ -235,7 +233,7 @@ function createNewTask(title, description, dueDate, priorityContent, selectedPri
     priorityID: selectedPriorityID,
     subtasks: subtasks.slice(),
     taskStatus: statusFromUser,
-    category: category
+    category: category,
   };
 }
 
@@ -442,10 +440,11 @@ function generateContactsAddTask(name, firstname, surname, i) {
   <div class="custom-checkbox">            
     <input class="inputCheckBox" type="checkbox" id="myCheckbox_${i}">                    
     <label class="nameContact" for="myCheckbox_${i}">${name}</label>                              
-  </div>`;}
+  </div>`;
+}
 
 function generateAvatarAddTask(selectedIndex, contact, firstname, surname) {
-  return /*html*/`
+  return /*html*/ `
       <div>
           <div class="circleAvatar" id="circle-${selectedIndex}" style="background-color: ${colors[selectedIndex]}">
               <p class="nameIdList" id="name-id">${firstname}${surname}</p>
