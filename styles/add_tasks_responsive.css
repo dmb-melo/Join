@@ -51,7 +51,6 @@
     flex-direction: column;
     justify-content: center;
     width: 0;
-    background-color: aqua;
   }
 
   .vector4 {
@@ -553,7 +552,6 @@
     .textContainer_addTask {
       font-size: 47px;
       margin-top: -200px !important;
-      background-color: black;
     }
 
     .inputLeft_addTask {
