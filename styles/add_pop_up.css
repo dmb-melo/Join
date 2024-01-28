@@ -7,7 +7,7 @@
 }
 
 .content_addTask {
- margin-right: 1030px;
+  margin-right: 1030px;
 }
 
 .contentTask {
@@ -420,6 +420,17 @@ textarea::placeholder {
   font-size: 20px;
   line-height: 24px;
   color: var(--Version-2-main-color, #2a3647);
+  padding-top: 70px;
+}
+
+.text_DueDateAdTask {
+  height: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--Version-2-main-color, #2a3647);
+  padding-top: 24px;
 }
 
 .frame211 {
@@ -1411,22 +1422,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-bottom: 12px;
   }
   .title {
-    width: 100%;
+    width: 270px;
   }
   .title_v1 {
-    width: 100%;
+    width: 270px;
   }
   .frame203 {
-    width: 100%;
+    width: 270px;
   }
   .description_v1 {
-    width: 100%;
+    width: 270px;
   }
   .frame207 {
-    width: 100%;
+    width: 270px;
   }
   .frame17 {
-    width: 100%;
+    width: 270px;
+  }
+
+  .text_enterDescription {
+    font-size: 12px;
+  }
+
+  .inputDate {
+    font-size: 12px;
+  }
+
+  .frame211 {
+    width: 270px;
+}
+
+  .searchContacts {
+    font-size: 12px;
+  }
+
+  .priority {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 48px;
   }
   .asignedTo_v1 {
     width: 95%;
@@ -1479,6 +1514,57 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .list_addTask_Board {
     position: relative;
   }
+}
 
-  
+@media (max-width: 550px) {
+  .closeAddBoard {
+    position: relative;
+    top: 55px;
+    left: 280px;
+  }
+  .addWindowCss {
+    width: 290px;
+  }
+
+  .description_v1_add_task_pop_up {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 168px;
+    width: 100%;
+  }
+
+  .inputRight_addTask {
+    width: 100%;
+  }
+  .dueDate {
+    width: 100%;
+  }
+  .inputDate {
+    width: 100%;
+  }
+
+  .comment {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .addTasksFooter {
+    display: block;
+    padding-bottom: 12px;
+  }
+  .circleAvatarBoard {
+    margin-bottom: 12px;
+  }
+  .underListContact {
+    position: relative;
+  }
+
+  .contactAvatar {
+    margin-top: -126px;
+  }
+
+  .list_addTask_Board {
+    position: relative;
+  }
 }

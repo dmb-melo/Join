@@ -390,7 +390,7 @@ function generate_addTask(statusFromUser){
             <div class="vector4"></div>
             <div class ="inputRight_addTask">
                 <div class="dueDate">
-                    <div class="text_DueDate">Due date<span class="spanClass">*</span></div>
+                    <div class="text_DueDateAdTask">Due date<span class="spanClass">*</span></div>
                     <div class="frame211" onclick="required(this)">                    
                             <div class="dueDate_frame14">
                                 <input class="inputDate"  type="date" name="date" max="2030-12-31" placeholder="dd/mm/yyyy" id="dueDate" required oninput="handleInput(this)" >   
