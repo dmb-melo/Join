@@ -192,13 +192,11 @@ input::placeholder {
 
 .selectedPriorityContentDiv {
   display: flex;
-  /* padding: 4px 18px; */
   align-items: center;
   margin-left: 10px;
   gap: 10px;
   width: 100px;
-  height: 32px;
-  justify-content: end;
+  height: 32px; 
 }
 
 .frame207 {
@@ -1214,6 +1212,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
   font-size: 24px;
   border: solid;
+  margin-left: 5px;
   font-family: "Inter", sans-serif;
 }
 
