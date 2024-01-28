@@ -251,17 +251,6 @@ textarea::placeholder {
 }
 
 .arrow_drop_downHover {
-<<<<<<< HEAD
-  display: none;
-}
-
-.imgArrows:hover .arrow_drop_downHover {
-  display: block;
-}
-
-.imgArrows:hover:hover .arrow_drop_down {
-  display: none;
-=======
   display: none; 
 }
 
@@ -271,7 +260,6 @@ textarea::placeholder {
 
 .imgArrows:hover:hover .arrow_drop_down {
   display: none; 
->>>>>>> a147692a1d23ea92bba2066e2d0b7e4eea5960a8
 }
 
 .circleAvatar {
