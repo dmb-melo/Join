@@ -10,6 +10,7 @@ let subtaskLevel = [
 
 async function boardInit() {
   await includeHTML();
+  await loadContactsFromServer();
   load();
   loadUserData();
   setInitialsInTheHeader();
