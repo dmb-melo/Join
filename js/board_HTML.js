@@ -193,16 +193,12 @@ function generateSmallCardHTML(task, className, clonedContentDiv, smallProgressD
 }
 
 function generateLargeCardHTML(task, className, clonedContentDiv, subsHtml) {
-  // Convert due date to a Date object
   var dueDate = new Date(task.dueDate);
-
-  // Format due date as Day/Month/Year
   var formattedDueDate = `${dueDate.getDate()}/${dueDate.getMonth() + 1}/${dueDate.getFullYear()}`;
   return /*html*/ `
       <div class="desingLagrCard" id="desingLagrCard">
         <div class="largeCardA" id="largeCardA">
           <div id="addTaskLargeCard" class="d-None"></div>
-    
           <div class="largesCard" id="largesCard">
             <div class="largeCardInside">
               <div class="largCardHeader">
