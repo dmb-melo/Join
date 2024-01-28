@@ -20,7 +20,7 @@ async function boardInit() {
   document.getElementById("sidebarCategoryBorard").classList.add("sidebarCategoryLinkActive");
   updateHtml();
   renderSmallContats();
-  renderProgressbar;
+  renderProgressbar();
 }
 
 function filterTasksByStatus(taskStatus) {
