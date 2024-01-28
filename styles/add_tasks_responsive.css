@@ -243,8 +243,17 @@
   }
 
   .task_succes_container{
-    width: 256px;
+    width: 214px;
+    margin-left: 0px;
+    display: flex;
+
   }
+
+  .task_succes_message {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    text-align: center;
+}
 }
 
 @media (min-width: 321px) and (max-width: 375px) {
@@ -506,8 +515,9 @@
     margin-bottom: 400px;
   }
 
-  .task_succes_container{
+ .task_succes_container {
     width: 256px;
+    margin-left: 27px;
   }
 }
 
@@ -748,7 +758,9 @@
 
   .task_succes_container {
     width: 256px;
+    margin-left: 93px;
   }
+
   .custom-checkbox-board label:before {
     left: 378px;
   }
@@ -972,6 +984,12 @@
     margin-left: 0%;
   }
 
+  .task_succes_container {
+    margin-left: 39px;
+    margin-top: 139px;
+  }
+
+
   .custom-checkbox-board label:before {
     left: 400px;
   }
@@ -1164,6 +1182,12 @@
   .task-succes {
     margin-right: 50px;
   }
+
+  .task_succes_container {
+    margin-left: 39px;
+    margin-top: 139px;
+  }
+
   .custom-checkbox-board label:before {
     left: 585px;
   }
@@ -1294,7 +1318,7 @@
   .frame211 {
     width: 640px;
   }
-  
+
   .inputDate {
     width: 780px;
   }
@@ -1333,8 +1357,14 @@
     display: flex;
     width: 250px;
   }
+
   .task_succes {
     margin-bottom: 700px;
+  }
+
+  .task_succes_container {
+    margin-left: -62px;
+    margin-top: 139px;
   }
 
   .custom-checkbox-board label:before {
