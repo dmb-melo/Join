@@ -186,13 +186,11 @@ input::placeholder {
 
 .selectedPriorityContentDiv {
   display: flex;
-  /* padding: 4px 18px; */
   align-items: center;
   margin-left: 10px;
   gap: 10px;
   width: 100px;
-  height: 32px;
-  justify-content: end;
+  height: 32px; 
 }
 
 .frame207 {
@@ -1198,6 +1196,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: white;
   font-size: 24px;
   border: solid;
+  margin-left: 5px;
   font-family: "Inter", sans-serif;
 }
 
@@ -1389,9 +1388,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .inputLeft_addTask {
   width: 100%;
 }
-.title {
+
+/* .title {
   width: 100%;
-}
+} */
+
 .title_v1 {
   width: 100%;  
 }
@@ -1408,7 +1409,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
 }
 .asignedTo_v1 {
- width: 100% ;
+ /* width: 100% ; */
+ width: 0;
+ margin-left: 141px;
+
 }
 .categoryFrame74 {
   width: 95%;
