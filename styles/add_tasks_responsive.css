@@ -1,12 +1,10 @@
 @media (max-width: 320px) {
-
-
   .box-sizing {
     display: none;
   }
 
   .span,
-  .nameContact,
+  .nameIdList,
   .nameContact,
   .text_DueDate,
   .inputDate,
@@ -14,7 +12,6 @@
   .inputDate,
   .textCategory,
   .categoryFrame74,
-  .comment,
   .textSubtasks,
   .textAddSubtasks,
   .description, .asignedTo {
@@ -32,7 +29,7 @@
   .priority,
   .inputLeft_addTask,
   .frame203 {
-    width: 300px;
+    width: 263px;
   }
 
   .contentTask {
@@ -41,13 +38,16 @@
   }
 
   .textContainer_addTask {    
-    font-size: 47px;
-    margin-left: 8px;
-    width: 320px;   
+    margin-left: 27px;
+    width: 263px;   
+  }
+
+  .text_addTask{
+    font-size: 48px;
   }
 
   .group66_addTask {  
-    margin-left: 10px;
+    margin-left: 27px;
     flex-direction: column;
     justify-content: center;
     width: 0;
@@ -59,7 +59,7 @@
 
   .inputRight_addTask {
     margin-top: 50px;
-    width: 300px;
+    width: 263px;
   }
 
   .title_v1 {
@@ -68,13 +68,13 @@
 
   .title {
     font-size: 16px;
-    width: 300px;
+    width: 263px;
   }
 
   .title_frame14 {
     padding: 10px 21px;
     gap: 10px;
-    width: 255px;
+    width: 212px;
   }
 
   .text_enterTitle {
@@ -93,23 +93,28 @@
     display: none;
   }
 
-  .categoryFrame74 {
-    width: 300px;
-    padding: 10px 21px;    
-    width:255px; 
-  }
   .categoryFrame_74 {
-    width: 300px;
     padding: 10px 21px;    
-    width:255px;
+    width: 212px;
   }  
+
+  .categoryFrame74 {
+    padding: 10px 13px;
+    width: 231px;
+}
+
+.circleAvatar{
+  height: 34px;
+  width: 34px;
+}
+  
 
   .list{
     height: 0px;
   }
 
   .searchContacts {
-    width: 250px;
+    width: 195px;
     font-size: 16px;
   }
 
@@ -128,16 +133,34 @@
     width: 210px;
   }
 
+  .custom-checkbox-board label:before {
+    left: 147px;
+}
+
+  .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+    left: 147px;
+  }
+
+  .contactList:hover .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+    left: 147px;
+}
+ 
+
+  .contactList:hover .custom-checkbox input[type="checkbox"]:checked + label:before {
+    left: 210px;
+}
+
   input[type="date"]::-webkit-calendar-picker-indicator {
     width: 20px;
   }
 
   .frame28{
-    width: 300px;
+    width: 260px;
   }
 
   .priority{
     width: 100%;
+    flex-direction: column;
   }
 
   .priorityUrgent,
@@ -171,11 +194,11 @@
   }
 
   .options {
-    width: 265px;
+    width: 221px;
   }
 
   .subtasks {
-    width: 300px;
+    width: 258px;
   }
 
   .subtasksFrame14 {
@@ -183,19 +206,20 @@
   }
 
   .subtaskItem {
-    width: 265px;
+    width: 224px;
   }
 
   .addTasksFooter{  
     margin-bottom: 25px;
-    margin-left: 12px;
-    width: 300px;   
+    margin-left: 27px;
+    width: 256px;   
   }
 
   .comment{
     display: flex;
     margin-top: 0px;
     text-wrap: wrap;
+    font-size: 14px;
   }
 
   .secondary {
@@ -204,11 +228,13 @@
 
   .primary {
     gap: 4px;
+    padding: 13px;
   }
 
   .textCreateTask {
-    font-size: 21px;
+    font-size: 17px;
     gap: 4px;
+    width: 105px;
   }
 
   .task_succes{
@@ -221,68 +247,271 @@
   }
 }
 
+@media (min-width: 321px) and (max-width: 375px) {
+  .box-sizing {
+    display: none;
+  }
 
+  .span,
+  .nameIdList,
+  .nameContact,
+  .text_DueDate,
+  .inputDate,
+  .titlePrio,
+  .inputDate,
+  .textCategory,
+  .categoryFrame74,
+  .textSubtasks,
+  .textAddSubtasks,
+  .description, .asignedTo {
+    font-size: 16px;
+  }
 
+  .description_v1,
+  .frame207,
+  .frame17,
+  .asignedTo_v1,
+  .underListContact,
+  .contactAvatar,
+  .dueDate,
+  .frame211,
+  .priority,
+  .inputLeft_addTask,
+  .frame203 {
+    width: 354px;
+  }
 
+  .contentTask {
+    overflow: scroll !important;
+    height: calc(100vh - 176px);
+  }
 
+  .textContainer_addTask {    
+    margin-left: 8px;
+    width: 263px;   
+    margin-top: 13px;
+  }
 
+  .text_addTask{
+    font-size: 48px;
+  }
 
+  .group66_addTask {  
+    margin-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: -32px;
+  }
 
+  .vector4 {
+    display: none;
+  }
 
+  .inputLeft_addTask {
+    margin-top: 50px;
+    width: 354px;
+  }
 
+  .inputRight_addTask {
+    margin-top: 50px;
+    width: 354px;
+  }
 
+  .title_v1 {
+    width: 10px;   
+  }
 
+  .title {
+    font-size: 16px;
+    width: 263px;
+  }
 
+  .title_frame14 {
+    padding: 10px 21px;
+    gap: 10px;
+    width: 310px;
+  }
 
+  .text_enterTitle {
+    font-size: 16px;
+    width: 310px;
+  }
 
+  .description_v1{
+    width: 310px;
+  }
 
+  .frame17{
+  width: 354px;
+  }
 
+  .text_enterDescription {
+    height: 88px;
+    padding: 18px 21px;
+    font-size: 16px;
+    width: 354px;
+  }
 
+  .recursor {
+    display: none;
+  }
 
+  .categoryFrame_74 {
+    padding: 10px 21px;    
+    width: 307px;
+  }  
 
+  .categoryFrame74 {
+    padding: 10px 13px;
+    width: 326px;
+}
 
+.circleAvatar{
+  height: 34px;
+  width: 34px;
+}
+  
 
+  .list{
+    height: 0px;
+  }
 
+  .searchContacts {
+    width: 195px;
+    font-size: 16px;
+  }
 
+  .underListContact {
+    position: relative;
+    height: 76px;
+  }
 
+  .contactList{
+    height: 40px; 
+  }
 
+  .custom-checkbox {
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 210px;
+  }
 
+  .custom-checkbox-board label:before {
+    left: 240px;
+}
 
+  .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+    left: 240px;
+  }
 
+  .contactList:hover .custom-checkbox-board input[type="checkbox"]:checked + label:before {
+    left: 240px;
+}
+ 
 
+  .contactList:hover .custom-checkbox input[type="checkbox"]:checked + label:before {
+    left: 210px;
+}
 
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 20px;
+  }
 
+  .frame28{
+    width: 260px;
+  }
 
+  .priority{
+    width: 100%;
+    margin-left: 45px;
+   
+  }
 
+  .priorityUrgent,
+  .priorityMedium,
+  .priorityLow {
+    width: 80px;
+    padding: 13px 8px;
+    gap: 8px;
+  }
 
+  .textUrgent {
+    font-size: 16px;
+  }
 
+  .textMedium {
+    font-size: 15px;
+  }
 
+  .textLow {
+    font-size: 16px;
+  }
 
+  .category {
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+  }
 
+  .underlist{
+    position: relative;    
+  }
 
+  .options {
+    width: 307px;
+  }
 
+  .subtasks {
+    width: 350px;
+  }
 
+  .subtasksFrame14 {
+    padding: 10px 21px;
+  }
 
+  .subtaskItem {
+    width: 224px;
+  }
 
+  .addTasksFooter{  
+    margin-bottom: 25px;
+    margin-left: 12px;
+    width: 342px;   
+  }
 
+  .comment{
+    display: flex;
+    margin-top: 0px;
+    font-size: 14px;
+  }
 
+  .secondary {
+    display: none;
+  }
 
+  .primary {
+    gap: 4px;
+    padding: 13px;
+  }
 
+  .textCreateTask {
+    font-size: 17px;
+    gap: 4px;
+    width: 105px;
+  }
 
+  .task_succes{
+    margin-left: 0%;
+    margin-bottom: 400px;
+  }
 
+  .task_succes_container{
+    width: 256px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 599px) {
+@media (min-width: 376px) and (max-width: 599px) {
   .box-sizing {
     display: none;    
   }
@@ -1095,6 +1324,7 @@
   .frame211 {
     width: 640px;
   }
+  
   .inputDate {
     width: 780px;
   }
