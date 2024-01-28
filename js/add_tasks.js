@@ -44,9 +44,9 @@ let statusFromUser = "todo";
 
 async function addTaskInit() {
   await includeHTML();
-  loadUserData();
+  await loadUserData();
+  await loadContactsFromServer();
   setInitialsInTheHeader();
-  loadContactsFromServer();
   load();
   renderTask();
   removeStyleSidebar();

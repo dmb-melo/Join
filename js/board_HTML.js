@@ -46,14 +46,13 @@ function generateAddEditeTask(taskId) {
                             </ul>
                             </div>
                         </div>  
-                        </div>                    
-                                           
+                        </div>                                     
                         <div class="contactAvatarBoard" id="contactAvatarEditBoard">
                             <div class="contactAvatarEdit" id="editAssignedContacts"></div>
                         </div>
                     </div>
                 </div>
-                <div class="inputRight_addTaskEdit" id="dateAddTaskEdit">
+                <div class="inputRight_addTask" id="dateAddTaskEdit">
                     <div class="dueDateBoard wd100">
                         <div class="text_DueDate">Due date</div>
                         <div class="frame211 wd100">                    
@@ -239,7 +238,7 @@ function generateLargeCardHTML(task, className, clonedContentDiv, subsHtml) {
                 <div class="largCardFooter">
                   <div class="largCardButton">
                   <div class="delete_task" onmouseover="changeImage(true)" onmouseout="changeImage(false)" onclick="deleteTask(event)">
-                    <img id="delete-task-image" class="delete-task-bt" src="../assets/img/delete_contacts.png">
+                    <img id="delete-task-image" class="delete-task-bt" src="./assets/img/delete_contacts.png">
                          <p class="delete-task-title" id="delete-task-title">Delete</p>
                     </div>
                     <img class="largCardButton_vector" src="./assets/img/vector.png" alt="">
@@ -363,7 +362,7 @@ function generate_addTask(statusFromUser){
                         </div>                  
                     </div>                         
                 </div>
-                <div class="description_v1" >
+                <div class="description_v1_add_task_pop_up" >
                     <div class="description">Description</div>             
                     <div class="frame207" onclick="required(this)">
                     <div class="frame17">
@@ -374,7 +373,7 @@ function generate_addTask(statusFromUser){
                 </div>
                 <div class="asignedTo_v1">
                     <div class="asignedTo">Assigned to</div>                     
-                    <div class="categoryFrame74" id="assigned" onclick="hideAssigned(event)">                    
+                    <div class="categoryFrame74_addTask_Board" id="assigned" onclick="hideAssigned(event)">                    
                         <input class="searchContacts" type="text" id="searchContacts" placeholder="Select contacts to assign">
                         <div class ="imgArrows" id="imgArrows" onclick="hideAssigned(event)">
                             <img class="arrow_drop_down" src="./assets/img/arrow_drop_down.png"  id="arrowAssigned" onclick="hideAssigned(event)" > 
@@ -392,7 +391,7 @@ function generate_addTask(statusFromUser){
             <div class="vector4"></div>
             <div class ="inputRight_addTask">
                 <div class="dueDate">
-                    <div class="text_DueDate">Due date<span class="spanClass">*</span></div>
+                    <div class="text_DueDateAdTask">Due date<span class="spanClass">*</span></div>
                     <div class="frame211" onclick="required(this)">                    
                             <div class="dueDate_frame14">
                                 <input class="inputDate"  type="date" name="date" max="2030-12-31" placeholder="dd/mm/yyyy" id="dueDate" required oninput="handleInput(this)" >   
@@ -451,7 +450,7 @@ function generate_addTask(statusFromUser){
                             </div>
                         </div>
                     </div>
-                    <div class="list"  class="hide">
+                    <div class="list_addTask_Board"  class="hide">
                         <ul id="list" class="hide underList"> 
                             <li class="options"  onclick="selectCategory(this)">
                                 <p class="category" value="Technical Task" onclick="hide(event)">Technical Task</p>
