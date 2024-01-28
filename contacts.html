@@ -31,7 +31,6 @@
     <script src="./js/edite_add_task_bord.js"></script>
     <script src="./js/add_pop_up.js"></script>
 </head>
-
 <body onload="contactsInit()" onclick="closeSubmenu()">
     <div w3-include-html="./assets/templates/sidebar.html"></div>
     <div w3-include-html="./assets/templates/header.html"></div>
@@ -91,8 +90,6 @@
                 </div>
             </div>
             </div>
-        
-            <!--edit contact popup-->
             <div class="editContactBackground d-none" id="editContactBackground">
             <div class="editContactPopup d-none" id="editContact">
                 <div class="editContactMain">
@@ -111,10 +108,8 @@
                     </div>
                 </div>
             </div>
-            </div>
-        
+            </div>       
             <div class="contacts-content">
-                <!--contact list-->
                 <div class="contact-list" id="contact-list">
                     <button class="add-contact hide-mobile-397px" onclick="addNewContact()">
                         <div class="add-contact-main">
@@ -124,8 +119,6 @@
                     </button>
                     <div class="contacts" id="contacts"></div>
                 </div>
-        
-                <!--contact details-->
                 <div class="contact-details hide-mobile-397px" id="contact-details">
                     <div class="contact-details-headline">
                         <img class="contacts-headline-arrow" src="./assets/img/arrow-left-line.png" onclick="render_contactsHtml()">
@@ -164,7 +157,5 @@
                 </div>
             </div>
     </div>
-
 </body>
-
 </html>
