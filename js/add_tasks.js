@@ -46,6 +46,7 @@ async function addTaskInit() {
   await includeHTML();
   loadUserData();
   setInitialsInTheHeader();
+  loadContactsFromServer();
   load();
   renderTask();
   removeStyleSidebar();
