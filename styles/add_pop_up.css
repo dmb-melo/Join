@@ -1451,42 +1451,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 270px;
 }
 
-<<<<<<< HEAD
-.inputLeft_addTask {
-  width: 100%;
-}
-
-/* .title {
-  width: 100%;
-} */
-
-.title_v1 {
-  width: 100%;  
-}
-.frame203 {
-  width: 100%;
-}
-.description_v1 {
-  width: 100%;
-}
-.frame207 {
-  width: 100%;
-}
-.frame17 {
-  width: 100%;
-}
-.asignedTo_v1 {
- /* width: 100% ; */
- width: 0;
- margin-left: 141px;
-
-}
-.categoryFrame74 {
-  width: 95%;
-}
-.vector4 {
-  display: none;
-=======
   .searchContacts {
     font-size: 12px;
   }
@@ -1549,7 +1513,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .list_addTask_Board {
     position: relative;
   }
->>>>>>> c78b47b3175b86f595c7b3538df24f557e29cfbb
 }
 
 @media (max-width: 550px) {
